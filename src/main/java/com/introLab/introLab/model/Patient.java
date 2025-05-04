@@ -17,6 +17,13 @@ public class Patient {
     @JoinColumn(name = "admitted_by", referencedColumnName = "employeeId")
     private Employee employee;
 
+    public Patient( String name, LocalDate dateOfBirth, Employee employee) {
+
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.employee = employee;
+    }
+
     public Patient() {
     }
 

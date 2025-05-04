@@ -8,11 +8,18 @@ import jakarta.persistence.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employeeId ;
+    private int employeeId;
     private String name;
     private String department;
     @Enumerated(EnumType.STRING)
     private Status statusEnum;
+
+    public Employee(String name, String department, Status statusEnum) {
+
+        this.name = name;
+        this.department = department;
+        this.statusEnum = statusEnum;
+    }
 
     public Employee() {
     }
